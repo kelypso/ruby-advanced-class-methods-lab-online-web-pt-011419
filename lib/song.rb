@@ -57,14 +57,11 @@ class Song
   end
   
   def create_from_filename(filename)
-    array = filename.split(" - ") # split the filename into an array
-    array[1] = array[1].chomp(".mp3") # remove filetype
-    song = self.create # create an instance
-    # assign index 0 artist_name and index 1 name
-    song.artist_name = array[0]
-    song.name = array[1] 
-    @@all << song
-    song
+
+  end
+  
+  def destroy_all
+    self.all.clear
   end
 end
 

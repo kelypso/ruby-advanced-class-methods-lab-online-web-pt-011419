@@ -41,7 +41,9 @@ class Song
     end
   end
   
-  
+  def self.alphabetical
+    
+  end
   
 end
 
@@ -75,16 +77,6 @@ end
 
 =begin
   
-  
-  def self.find_or_create_by_name(title)
-    result = self.find_by_name(title)
-    if result
-      result
-    else
-      self.create_by_name(title)
-    end
-  end
-
   def self.alphabetical
     sort = self.all.sort_by {|song| song.name}
     sort

@@ -17,8 +17,8 @@ class Song
   end
   
   def self.new_by_name(name)
-    song = self.new(name)
-    @@all << song 
+    song = self.new
+    song.name = name
     song
   end
 end
@@ -52,23 +52,6 @@ end
 
 
 =begin
-class Song
-  attr_accessor :name, :artist_name
-  @@all = []
-
-  def self.all
-    @@all
-  end
-
-  def save
-    self.class.all << self
-  end
-  
-  def self.create  #class constructor
-    song = self.new  #initializes a song
-    self.all << song  #saves to Song.all
-    song  #returns the song instance that was initialized
-  end
   
   def self.new_by_name(title)  #class constructor
     song = self.new  #initializes a song

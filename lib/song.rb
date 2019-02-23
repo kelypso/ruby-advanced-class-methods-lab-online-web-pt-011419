@@ -52,7 +52,7 @@ class Song
     song = self.new # create an instance
     # assign index 0 artist_name and index 1 name
     song.artist_name = array[0]
-    song.artist_name = array[1] 
+    song.name = array[1] 
     song
   end
 end

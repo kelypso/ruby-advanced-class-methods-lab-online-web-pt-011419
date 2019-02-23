@@ -46,7 +46,7 @@ class Song
     sorted
   end
   
-  def self./new_from_filename(filename)
+  def self.new_from_filename(filename)
     array = filename.split(" - ") # split the filename into an array
     array[1] = array[1].chomp(".mp3") # remove filetype
     song = self.new # create an instance

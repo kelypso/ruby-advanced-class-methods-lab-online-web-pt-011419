@@ -47,8 +47,8 @@ class Song
   end
   
   def new_from_filename(filename)
-    filename.split(" - ")
-    
+    filename.split(" - ") # split the filename
+    # assign index 0 artist_name and index 1 name
     song
   end
 end

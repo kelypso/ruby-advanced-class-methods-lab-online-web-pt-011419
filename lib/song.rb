@@ -33,7 +33,11 @@ class Song
   end
   
   def self.find_or_create_by_name(name)
-    
+    result = self.find_by_name(name)
+    if result
+      result
+    else
+      self.create_by_name(name)
   end
 end
 
@@ -67,22 +71,6 @@ end
 
 =begin
   
-  def self.new_by_name(title)  #class constructor
-    song = self.new  #initializes a song
-    song.name = title  #sets song name string as a property
-    song  #returns song instance with that name as a property
-  end
-  
-  def self.create_by_name(title)  #class constructor
-    song = self.create 
-    song.name = title 
-    song
-  end
-  
-  def self.find_by_name(title)  #class finder
-    result = self.all.detect{|song| song.name == title}
-    result
-  end
   
   def self.find_or_create_by_name(title)
     result = self.find_by_name(title)

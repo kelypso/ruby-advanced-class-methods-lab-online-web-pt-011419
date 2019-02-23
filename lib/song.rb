@@ -46,7 +46,7 @@ class Song
     sorted
   end
   
-  def new_from_filename
+  def new_from_filename(filename)
     
   end
 end
@@ -80,12 +80,6 @@ end
 
 
 =begin
-  
-  def self.alphabetical
-    sort = self.all.sort_by {|song| song.name}
-    sort
-  end
-
   def self.new_from_filename(filename)
     song_arr = filename.split(" - ")
     song_arr[1] = song_arr[1].chomp(".mp3")

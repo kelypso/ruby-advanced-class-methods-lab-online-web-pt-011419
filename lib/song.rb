@@ -47,7 +47,11 @@ class Song
   end
   
   def new_from_filename(filename)
-    filename.split(" - ") # split the filename
+    array = filename.split(" - ") # split the filename into an array
+    array[1] = array[1].chomp(".mp3") # remove filetype
+    song = self.new # create an instance
+    song.name = array[0]
+    song.artist_name = array[1]
     # assign index 0 artist_name and index 1 name
     song
   end

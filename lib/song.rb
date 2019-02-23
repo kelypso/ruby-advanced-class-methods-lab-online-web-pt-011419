@@ -64,6 +64,7 @@ class Song
     song.artist_name = array[0]
     song.name = array[1] 
     @@all << song
+    song
   end
 end
 
